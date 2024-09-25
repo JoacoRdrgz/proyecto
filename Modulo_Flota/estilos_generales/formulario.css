@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-color: #f0f0f0 !important;
+}
+
+h1 {
+    text-align: center;
+}
+
+p.explicacion {
+    text-align: center;
+}
+
+img.logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+    margin-top: 60px;
+}
+
+label {
+    color: rgb(81, 81, 81) !important;
+}
+
+input,
+select {
+    margin-bottom: 8px !important;
+}
+
+input.btn {
+    width: 100%;
+}
+
+li.list-group {
+    height: 30px !important;
+}
+
+li.cardItem {
+    background-color: #085cfc;
+}
+
+table {
+    margin-top: 8px;
+}
+
+.ok {
+    background-color: greenyellow;
+}
+
+.bad {
+    background-color: red;
+}
+
+.tabla_Porfiada,
+.barra_Horizontal {
+    overflow: auto;
+    width: 100% !important;
+}
+
+hr.formulario {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.m_select2_1 {
+    width: 180px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexCard {
+    display: flex;
+    justify-content: center;
+}
+
+.cargador {
+    position: fixed;
+    z-index: 9999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url(Imagenes/Página/loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    /* Ajusta el tamaño de la imagen aquí */
+    opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+    img.logo {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 160px) {
+    h1.bienvenido {
+        font-size: xx-small;
+    }
+}

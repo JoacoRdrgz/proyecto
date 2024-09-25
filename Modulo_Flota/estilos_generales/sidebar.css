@@ -1,0 +1,191 @@
+.sidebar {
+    padding: 10px;
+    width: 250px;
+    background-color: #f0f4ff;
+    /* Color más claro y suave */
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Agrega sombra suave */
+}
+
+img.logo_Blanco {
+    width: 100%;
+}
+
+.cuadricula a {
+    display: block;
+    color: #000000 !important;
+    /* Asegura que todos los enlaces sean del mismo color gris oscuro */
+    padding: 12px 15px 12px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+.sidebar a.elemento {
+    opacity: 0.7;
+}
+
+.sidebar a.elemento.activo {
+    opacity: 1;
+    font-size: 17px;
+    background-color: #dce6ff;
+    /* Fondo para el activo */
+    color: #333 !important;
+    /* Asegura el mismo color gris oscuro en el enlace activo */
+}
+
+.sidebar a.elemento.titulo {
+    opacity: 1;
+    font-size: 17px;
+    color: #333 !important;
+    /* Texto gris oscuro para títulos */
+    background-color: #085cfc;
+    /* Color principal más oscuro para el título */
+    border-radius: 10px;
+}
+
+.sidebar a.sub {
+    padding-left: 28px;
+}
+
+.sidebar a.sub2 {
+    padding-left: 80px;
+}
+
+.sidebar a.elemento:hover:not(.activo, .nav_logo) {
+    opacity: 1;
+    font-size: 17px;
+    background-color: #e3edff;
+    /* Cambio de fondo en hover */
+    color: #085cfc !important;
+    /* Color de texto en hover */
+}
+
+.content {
+    margin-left: 250px;
+    padding-top: 30px !important;
+    padding-left: 56px !important;
+    padding-right: 56px !important;
+    padding-bottom: 10px !important;
+    transition: margin-left 0.3s ease;
+}
+
+.content.expanded {
+    margin-left: 0;
+}
+
+hr.sidebarHr {
+    position: relative !important;
+    margin-top: 0px !important;
+    margin-bottom: 9px !important;
+    color: #020202 !important;
+    /* Asegura el color del texto gris oscuro */
+}
+
+/* Estilo para el nombre de usuario en la parte inferior */
+.dropdown a {
+    color: #4e4e4e !important;
+    /* Color gris oscuro para el nombre de usuario */
+}
+
+/* Hover para todos los enlaces */
+.sidebar a:hover,
+.dropdown a:hover {
+    color: #085cfc !important;
+    /* Color azul en hover */
+}
+
+.imgPerfil {
+    border-radius: 100%;
+}
+
+/* Scrollbar modificado */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #f0f4ff;
+    /* Mantener el mismo color de fondo */
+}
+
+/* Botón de toggle */
+.toggle-sidebar {
+    position: fixed;
+    top: 40px;
+    left: 250px;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    background-color: #085cfc;
+    color: white;
+    cursor: pointer;
+    height: 45px;
+    padding: 5px 8px;
+    border-radius: 0 5px 5px 0;
+    transition: left 0.3s ease;
+}
+
+/* Ocultar el sidebar */
+.sidebar.hidden {
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsividad */
+@media screen and (max-width: 650px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    .toggle-sidebar {
+        display: none;
+        z-index: 0;
+    }
+
+    div.cuadricula {
+        display: grid;
+        color: #333;
+        padding: 16px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .content {
+        margin-left: 0px;
+        padding-top: 40px !important;
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.content {
+        margin-left: 0px;
+        padding-top: 40px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        height: 100vh;
+    }
+}
